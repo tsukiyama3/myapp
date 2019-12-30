@@ -27,3 +27,40 @@ a {
 
 /* 共通 */
 
+/* header */
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(35, 57, 73);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.header-left {
+  float: left;
+  width: 30%;
+  line-height: 65px;
+  padding-left: 40px;
+  color: #fff;
+}
+
+.header-right {
+  float: right;
+  width: 30%;
+  line-height: 65px;
+}
+
+.header-right a {
+  float: right;
+  margin-right: 40px;
+  color: #fff;
+}
+
+.header-right a:hover {
+  opacity: .3;
+}
+
+/* header */
+
