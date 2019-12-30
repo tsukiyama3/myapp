@@ -46,7 +46,7 @@ if (!empty($_POST)) {
     <h1>MyApp</h1>
   </div>
   <div class="header-right">
-    <a href="#">&laquo;&nbsp;書き直す</a>
+    <a href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>
   </div>
 
 </header>
