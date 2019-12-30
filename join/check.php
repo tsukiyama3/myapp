@@ -1,3 +1,32 @@
+<?php
+
+session_start();
+require('../dbconnect.php');
+
+//セッションがない場合の処理
+if (!isset($_SESSION['join'])) {
+  header('Location: index.php');
+  exit();
+}
+
+if (!empty($_POST)) {
+
+  //データベースにデータを挿入
+  $statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, created=NOW()');
+  echo $statement->execute(array(
+    $_SESSION['join']['name'],
+    $_SESSION['join']['email'],
+    sha1($_SESSION['join']['password'])
+  ));
+
+  //セッションを消す
+  unset($_SESSION['join']);
+  header('Location: thanks.php');
+  exit();
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
