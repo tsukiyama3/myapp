@@ -24,6 +24,44 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+  <h1>会員登録</h1>
+  <p class="gray">* 次のフォームに必要事項を入力してください。</p>
+  <form action="" method="post">
+    <div class="content">
+      <div class="content-left">
+        <h2>ニックネーム</h2>
+      </div>
+      <div class="content-right">
+        <input type="text" name="name" size="35" maxlength="255" value="">
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-left">
+        <h2>メールアドレス</h2>
+      </div>
+      <div class="content-right">
+        <input type="text" name="email" size="35" maxlength="255" value="">
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-left">
+        <h2>パスワード</h2>
+      </div>
+      <div class="content-right">
+        <input type="password" name="password" size="10" maxlength="20" value="">
+      </div>
+    </div>
+    <div class="submit">
+      <input class="btn" type="submit" value="入力内容を確認する">
+    </div>
+  </form>
+</div>
+
+<!-- container -->
   
 </body>
 </html>
