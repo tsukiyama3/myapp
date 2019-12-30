@@ -23,6 +23,53 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <h1>会員登録</h1>
+  <p class="gray">* 入力した内容を確認して、「登録する」ボタンをクリックしてください。</p>
+
+  <form action="" method="post">
+  
+    <input type="hidden" name="action" value="submit">
+    <div class="content">
+      <div class="content-left">
+        <h2>ニックネーム</h2>
+      </div>
+      <div class="content-right check-content">
+
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-left">
+        <h2>メールアドレス</h2>
+      </div>
+      <div class="content-right check-content">
+      
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-left">
+        <h2>パスワード</h2>
+      </div>
+      <div class="content-right check-content">
+        <p>【表示されません】</p>
+      </div>
+    </div>
+
+    <div class="submit">
+      <input class="btn" type="submit" value="登録する">
+    </div>
+  
+  </form>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
