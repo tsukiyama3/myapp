@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
+<!-- header -->
+
+<header>
+
+  <div class="header-left">
+    <h1>MyApp</h1>
+  </div>
+
+</header>
+
+<!-- header -->
   
 </body>
 </html>
