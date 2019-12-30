@@ -140,5 +140,13 @@ header {
   background-color: rgb(112, 125, 134);
 }
 
+.check-content {
+  line-height: 45px;
+}
+
+.check-content > p {
+  margin: 0;
+}
+
 /* container */
 
