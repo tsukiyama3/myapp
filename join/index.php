@@ -87,6 +87,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
     <div class="content">
       <div class="content-left">
         <h2>ニックネーム</h2>
+        <?php if ($error['name'] === 'blank'): ?>
+          <p class="error">* ニックネームを入力してください。</p>
+        <?php endif ?>
       </div>
       <div class="content-right">
         <input type="text" name="name" size="35" maxlength="255" value="">
