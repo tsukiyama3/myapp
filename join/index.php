@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>myapp</title>
   <link rel="stylesheet" href="../styles.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <h1>MyApp</h1>
   </div>
   <div class="header-right">
-    <a href="#">ログイン</a>
+    <a href="#"><i class="fas fa-sign-in-alt"></i>ログイン</a>
   </div>
 
 </header>
