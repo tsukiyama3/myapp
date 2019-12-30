@@ -1,0 +1,29 @@
+/* 共通 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  background-color: #ececec;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.error {
+  font-size: 70%;
+	color: #BB1850;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+/* 共通 */
+
