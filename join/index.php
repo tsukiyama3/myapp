@@ -92,7 +92,7 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
         <?php endif ?>
       </div>
       <div class="content-right">
-        <input type="text" name="name" size="35" maxlength="255" value="">
+        <input type="text" name="name" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['name'], ENT_QUOTES)); ?>">
       </div>
     </div>
     <div class="content">
@@ -100,7 +100,7 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
         <h2>メールアドレス</h2>
       </div>
       <div class="content-right">
-        <input type="text" name="email" size="35" maxlength="255" value="">
+        <input type="text" name="email" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>">
       </div>
     </div>
     <div class="content">
@@ -108,7 +108,7 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
         <h2>パスワード</h2>
       </div>
       <div class="content-right">
-        <input type="password" name="password" size="10" maxlength="20" value="">
+        <input type="password" name="password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
       </div>
     </div>
     <div class="submit">
