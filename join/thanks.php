@@ -20,6 +20,18 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <h1>会員登録</h1>
+  <p>ユーザー登録が完了しました。</p>
+  <a class="btn-login" href="#">ログインする</a>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
