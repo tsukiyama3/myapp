@@ -99,10 +99,10 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
       <div class="content-left">
         <h2>メールアドレス</h2>
         <?php if ($error['email'] === 'blank'): ?>
-          <p>* メールアドレスを入力してください。</p>
+          <p class="error">* メールアドレスを入力してください。</p>
         <?php endif; ?>
         <?php if ($error['email'] === 'duplicate'): ?>
-          <p>* 指定されたメールアドレスは、既に登録されています。</p>
+          <p class="error">* 指定されたメールアドレスは、既に登録されています。</p>
         <?php endif; ?>
       </div>
       <div class="content-right">
