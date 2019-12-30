@@ -115,6 +115,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
         <?php if ($error['password'] === 'blank'): ?>
           <p class="error">* パスワードを入力してください。</p>
         <?php endif; ?>
+        <?php if ($error['password'] === 'length'): ?>
+          <p class="error">* パスワードは４文字以上で入力してください。</p>
+        <?php endif; ?>
       </div>
       <div class="content-right">
         <input type="password" name="password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
