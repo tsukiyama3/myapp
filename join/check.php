@@ -68,7 +68,7 @@ if (!empty($_POST)) {
         <h2>ニックネーム</h2>
       </div>
       <div class="content-right check-content">
-
+        <?php print(htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES)); ?>
       </div>
     </div>
 
@@ -77,7 +77,7 @@ if (!empty($_POST)) {
         <h2>メールアドレス</h2>
       </div>
       <div class="content-right check-content">
-      
+        <?php print(htmlspecialchars($_SESSION['join']['email'], ENT_QUOTES)); ?>
       </div>
     </div>
 
