@@ -1,3 +1,56 @@
+<?php
+
+session_start();
+require('../dbconnect.php');
+
+if (!empty($_POST)) {
+
+  //エラー処理
+
+  //name
+  if ($_POST['name'] === '') {
+    $error['name'] = 'blank';
+  }
+
+  //email
+  if ($_POST['email'] === '') {
+    $error['email'] = 'blank';
+  }
+
+  //password
+  if (strlen($_POST['password']) < 4) {
+    $error['password'] = 'length';
+  }
+
+  if ($_POST['password'] === '') {
+    $error['password'] = 'blank';
+  }
+
+  //メールアドレスの重複確認
+  if (empty($error)) {
+    $member = $db->prepare('SELECT COUNT(*) AS cnt FROM members WHERE email=?');
+    $member->execute(array($_POST['email']));
+    $record = $member->fetch();
+    if ($record['cnt'] > 0) {
+      $error['email'] = 'duplicate';
+    }
+  }
+
+  //セッション
+  if (empty($error)) {
+    $_SESSION['join'] = $_POST;
+    header('Location: check.php');
+    exit();
+  }
+
+}
+
+//rewrite処理
+if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
+  $_POST = $_SESSION['join'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
