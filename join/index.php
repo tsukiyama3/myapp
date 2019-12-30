@@ -98,6 +98,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
     <div class="content">
       <div class="content-left">
         <h2>メールアドレス</h2>
+        <?php if ($error['email'] === 'blank'): ?>
+          <p>* メールアドレスを入力してください。</p>
+        <?php endif; ?>
       </div>
       <div class="content-right">
         <input type="text" name="email" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>">
