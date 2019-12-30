@@ -101,6 +101,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
         <?php if ($error['email'] === 'blank'): ?>
           <p>* メールアドレスを入力してください。</p>
         <?php endif; ?>
+        <?php if ($error['email'] === 'duplicate'): ?>
+          <p>* 指定されたメールアドレスは、既に登録されています。</p>
+        <?php endif; ?>
       </div>
       <div class="content-right">
         <input type="text" name="email" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>">
