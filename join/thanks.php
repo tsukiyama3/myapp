@@ -27,7 +27,7 @@
 
   <h1>会員登録</h1>
   <p>ユーザー登録が完了しました。</p>
-  <a class="btn-login" href="#">ログインする</a>
+  <a class="btn-login" href="../login.php">ログインする</a>
 
 </div>
 
