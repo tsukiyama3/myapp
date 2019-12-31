@@ -14,11 +14,12 @@ if (!empty($_POST)) {
 
   // ログイン処理
   if ($_POST['email'] !== '' && $_POST['password'] !== '') {
-    $login = $db->prepare('SELECT * FROM members WHERE email=?, AND password=?');
+    $login = $db->prepare('SELECT * FROM members WHERE email=? AND password=?');
     $login->execute(array(
       $_POST['email'],
       sha1($_POST['password'])
     ));
+    $member = $login->fetch();
 
     if ($member) {
       $_SESSION['id'] = $member['id'];
