@@ -1,3 +1,47 @@
+<?php
+
+session_start();
+require('dbconnect.php');
+
+//クッキー
+if ($_COOKIE['email'] !== '') {
+  $email = $_COOKIE['email'];
+}
+
+if (!empty($_POST)) {
+
+  $email = $_POST['email'];
+
+  // ログイン処理
+  if ($_POST['email'] !== '' && $_POST['password'] !== '') {
+    $login = $db->prepare('SELECT * FROM members WHERE email=?, AND password=?');
+    $login->execute(array(
+      $_POST['email'],
+      sha1($_POST['password'])
+    ));
+
+    if ($member) {
+      $_SESSION['id'] = $member['id'];
+      $_SESSION['time'] = time();
+
+      if ($_POST['save'] === 'on') {
+        setcookie('email', $_POST['email'], time() + 60 * 60 * 24 * 14);
+      }
+
+      header('Location: index.php');
+      exit();
+
+    } else { // ログインを失敗した場合の処理
+      $error['login'] = 'failed';
+    }
+
+  } else { // フォームが空の場合の処理
+    $error['login'] = 'blank';
+  }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -47,6 +91,12 @@
     <div class="content">
       <div class="content-left">
         <h2>パスワード</h2>
+        <?php if ($error['login'] === 'blank'): ?>
+          <p class="error">* メールアドレスとパスワードを入力してください。</p>
+        <?php endif; ?>
+        <?php if ($error['login'] === 'failed'): ?>
+          <p class="error">* ログインに失敗しました、正しく入力してください。</p>
+        <?php endif; ?>
       </div>
     
       <div class="content-right">
