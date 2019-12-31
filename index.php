@@ -11,7 +11,21 @@
 </head>
 <body>
   
+<!-- header -->
 
+<header>
+
+  <div class="header-left">
+    <h1>MyApp</h1>
+  </div>
+
+  <div class="header-right">
+    <a href=""><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+  </div>
+
+</header>
+
+<!-- header -->
 
 <script src="main.js"></script>
 </body>
