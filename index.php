@@ -67,6 +67,33 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
 
 <!-- header-sub -->
 
+<!-- post -->
+
+<?php foreach ($posts as $post): ?>
+
+  <?php if ($_SESSION['id'] === $_POST['member_id']): ?>
+
+    <div class="post">
+    
+      <div class="post-left">
+        <h2>タイトル:&nbsp;&nbsp;<a href=""><?php print(htmlspecialchars($post['title'], ENT_QUOTES)); ?></a></h2>
+        <time class="gray">投稿日時:&nbsp;<?php print(htmlspecialchars($post['created'], ENT_QUOTES)); ?></time>
+      </div>
+
+      <div class="post-right">
+        <h2>感想</h2>
+        <p class="impre"><?php print(htmlspecialchars($post['impre'], ENT_QUOTES)); ?></p>
+      </div>
+    
+    </div>
+
+    <hr>
+  <?php endif; ?>
+
+<?php endforeach; ?>
+
+<!-- post -->
+
 <script src="main.js"></script>
 </body>
 </html>
