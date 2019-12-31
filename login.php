@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- header -->
+
+<header>
+
+  <div class="header-left">
+    <h1>MyApp</h1>
+  </div>
+
+  <div class="header-right">
+    <a href="join/">&laquo;入会手続きをする</a>
+  </div>
+
+</header>
+
+<!-- header -->
   
 </body>
 </html>
