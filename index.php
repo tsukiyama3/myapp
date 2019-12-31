@@ -27,6 +27,19 @@
 
 <!-- header -->
 
+<!-- header-sub -->
+
+<div class="header-sub">
+
+  <h4 class="member-name">さんのページ</h4>
+  <a class="post-btn" href="">投稿する</a>
+
+</div>
+
+<hr>
+
+<!-- header-sub -->
+
 <script src="main.js"></script>
 </body>
 </html>
