@@ -1,3 +1,30 @@
+<?php
+
+session_start();
+require('dbconnect.php');
+
+//セッションのidがセットされていて1時間以内の場合の処理
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+
+  // $_SESSION['time']を更新
+  $_SESSION['time'] = time();
+  //member関係のsql文
+  $members = $db->prepare('SELECT * FROM members WHERE id=?');
+  $members->execute(array($_SESSION['id']));
+  $member = $members->fetch();
+
+} else { // 前回のログインから1時間以上たった場合の処理
+
+  // ログイン画面に返す
+  header('Location: login.php');
+  exit();
+
+}
+
+// posts関係のsql文
+$posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id ORDER BY p.created DESC');
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -31,7 +58,7 @@
 
 <div class="header-sub">
 
-  <h4 class="member-name">さんのページ</h4>
+  <h4 class="member-name"><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?>さんのページ</h4>
   <a class="post-btn" href="">投稿する</a>
 
 </div>
