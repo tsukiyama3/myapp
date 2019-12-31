@@ -71,7 +71,7 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
     <h1>MyApp</h1>
   </div>
   <div class="header-right">
-    <a href="#"><i class="fas fa-sign-in-alt"></i>ログイン</a>
+    <a href="../login.php"><i class="fas fa-sign-in-alt"></i>ログイン</a>
   </div>
 
 </header>
