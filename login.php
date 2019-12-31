@@ -24,6 +24,46 @@
 </header>
 
 <!-- header -->
+
+<!-- container  -->
+
+<div class="container">
+
+  <h1>ログイン画面</h1>
+  <p class="gray">* メールアドレスとパスワードを入力してログインしてください。</p>
+
+  <form action="" method="post">
+  
+    <div class="content">
+      <div class="content-left">
+        <h2>メールアドレス</h2>
+      </div>
+
+      <div class="content-right">
+        <input type="text" name="email" size="35" maxlength="255" value="<?php print(htmlspecialchars($email, ENT_QUOTES)); ?>">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-left">
+        <h2>パスワード</h2>
+      </div>
+    
+      <div class="content-right">
+        <input type="password" name="password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
+      </div>
+    </div>
+
+    <input type="checkbox" name="save" value="on">
+    <label for="save">ログイン情報を記憶する。</label>
+    <br>
+    <input class="btn" type="submit" value="ログイン">
+  
+  </form>
+
+</div>
+
+<!-- container  -->
   
 </body>
 </html>
