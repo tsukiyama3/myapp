@@ -1,3 +1,17 @@
+<?php
+
+require('dbconnect.php');
+
+// 正しく$_REQUEST['id']が指定されていた場合の処理
+if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
+  // $_REQUEST['id']に$idを代入
+  $id = $_REQUEST['id'];
+  // sql文
+  $statement = $db->prepare('DELETE FROM posts WHERE id=?');
+  $statement->execute(array($id));
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
