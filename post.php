@@ -25,6 +25,43 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <h1>投稿内容</h1>
+
+  <div class="post-content">
+  
+    <div class="post-content-left">
+      <h2>タイトル</h2>
+    </div>
+
+    <div class="post-content-right">
+      <p></p>
+    </div>
+  
+  </div>
+
+  <div class="post-content">
+
+    <div class="post-content-left">
+      <h2>感想</h2>
+    </div>
+
+    <div class="post-content-right">
+      <p class="impre"></p>
+    </div>
+
+  </div>
+  <a href="">編集する</a>
+  |
+  <a href="">削除する</a>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
