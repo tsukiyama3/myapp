@@ -94,6 +94,12 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
 
 <!-- post -->
 
+<!-- page_top -->
+
+  <div id="page_top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
+
+<!-- page_top -->
+
 <script src="main.js"></script>
 </body>
 </html>
