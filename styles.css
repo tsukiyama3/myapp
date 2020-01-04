@@ -295,3 +295,25 @@ time {
 
 /* post */
 
+/* page_top */
+
+#page_top {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+#page_top a {
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+#page_top a:hover {
+  background-color: #666;
+}
+
+/* page_top */
+
