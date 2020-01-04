@@ -25,6 +25,47 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <h1>更新</h1>
+  <p class="gray">* 更新内容を入力してください。</p>
+
+  <form action="" method="post">
+  
+    <div class="content">
+    
+      <div class="content-left">
+        <h2>タイトル</h2>
+      </div>
+
+      <div class="content-right">
+        <input type="text" name="title" size="50" value="">
+      </div>
+    
+    </div>
+
+    <div class="content">
+    
+      <div class="content-left">
+        <h2>感想</h2>
+      </div>
+    
+      <div class="content-right">
+        <textarea name="impre" cols="50" rows="10"></textarea>
+      </div>
+
+    </div>
+    
+    <input class="btn" type="submit" value="更新する">
+
+  </form>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
