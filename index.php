@@ -71,7 +71,7 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
 
 <?php foreach ($posts as $post): ?>
 
-  <?php if ($_SESSION['id'] === $_POST['member_id']): ?>
+  <?php if ($_SESSION['id'] === $post['member_id']): ?>
 
     <div class="post">
     
