@@ -25,6 +25,47 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <h1>投稿画面</h1>
+  <p class="gray">* 投稿内容を入力してください。</p>
+
+  <form action="" method="post">
+  
+    <div class="content">
+    
+      <div class="content-left">
+        <h2>タイトル</h2>
+      </div>
+
+      <div class="content-right">
+        <input type="text" name="title" value="">
+      </div>
+    
+    </div>
+
+    <div class="content">
+    
+      <div class="content-left">
+        <h2 class="none-right">感想</h2>
+      </div>
+
+      <div class="content-right">
+        <textarea name="impre" cols="50" rows="10"></textarea>
+      </div>
+    
+    </div>
+    <br>
+    <input class="btn" type="submit" value="投稿する">
+  
+  </form>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
