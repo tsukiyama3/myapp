@@ -47,7 +47,7 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
   </div>
 
   <div class="header-right">
-    <a href=""><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+    <a href="logout.php"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
   </div>
 
 </header>
