@@ -76,7 +76,7 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
     <div class="post">
     
       <div class="post-left">
-        <h2>タイトル:&nbsp;&nbsp;<a href=""><?php print(htmlspecialchars($post['title'], ENT_QUOTES)); ?></a></h2>
+        <h2>タイトル:&nbsp;&nbsp;<a href="post.php?id=<?php print(htmlspecialchars($post['id'], ENT_QUOTES)); ?>"><?php print(htmlspecialchars($post['title'], ENT_QUOTES)); ?></a></h2>
         <time class="gray">投稿日時:&nbsp;<?php print(htmlspecialchars($post['created'], ENT_QUOTES)); ?></time>
       </div>
 
