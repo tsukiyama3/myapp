@@ -1,3 +1,32 @@
+<?php
+
+session_start();
+require('dbconnect.php');
+
+if (!empty($_POST)) {
+  // エラー処理
+  if ($_POST['title'] === '') {
+    $error['title'] = 'blank';
+  }
+
+  if ($_POST['impre'] === '') {
+    $error['impre'] = 'blank';
+  }
+
+  // postsのsql文
+  if (empty($error)) {
+    $posts = $db->prepare('INSERT INTO posts SET member_id=?, title=?, impre=?, created=NOW()');
+    $posts->execute(array(
+      $_SESSION['id'],
+      $_POST['title'],
+      $_POST['impre']
+    ));
+    header('Location: index.php');
+    exit();
+  }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,10 +68,13 @@
     
       <div class="content-left">
         <h2>タイトル</h2>
+        <?php if ($error['title'] === 'blank'): ?>
+          <p class="error">* タイトルを入力してください。</p>
+        <?php endif; ?>
       </div>
 
       <div class="content-right">
-        <input type="text" name="title" value="">
+        <input type="text" name="title" value="<?php print(htmlspecialchars($_POST['title'], ENT_QUOTES)); ?>">
       </div>
     
     </div>
@@ -51,10 +83,13 @@
     
       <div class="content-left">
         <h2 class="none-right">感想</h2>
+        <?php if ($error['impre'] === 'blank'): ?>
+          <p class="error">* 感想を入力してください。</p>
+        <?php endif; ?>
       </div>
 
       <div class="content-right">
-        <textarea name="impre" cols="50" rows="10"></textarea>
+        <textarea name="impre" cols="50" rows="10"><?php print(htmlspecialchars($_POST['impre'], ENT_QUOTES)); ?></textarea>
       </div>
     
     </div>
