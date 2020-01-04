@@ -73,7 +73,7 @@ $post = $posts->fetch();
     </div>
 
   </div>
-  <a href="">編集する</a>
+  <a href="update.php?id=<?php print($post['id']); ?>">編集する</a>
   |
   <a href="">削除する</a>
 
