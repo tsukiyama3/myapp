@@ -59,7 +59,7 @@ $posts = $db->query('SELECT p.* FROM posts p, members m WHERE p.member_id=m.id O
 <div class="header-sub">
 
   <h4 class="member-name"><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?>さんのページ</h4>
-  <a class="post-btn" href="">投稿する</a>
+  <a class="post-btn" href="input.php">投稿する</a>
 
 </div>
 
