@@ -25,6 +25,16 @@
 </header>
 
 <!-- header -->
+
+<!-- container -->
+
+<div class="container">
+
+  <p class="gray">* 投稿を削除しました。</p>
+
+</div>
+
+<!-- container -->
   
 </body>
 </html>
