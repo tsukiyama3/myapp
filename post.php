@@ -1,3 +1,21 @@
+<?php
+
+require('dbconnect.php');
+
+$id = $_REQUEST['id'];
+
+// 正しく$idが指定されていない場合の処理
+if (!isset($id) || $id <= 0) {
+  print('１位上の数字で指定してください。');
+  exit();
+}
+
+// postsのsql文
+$posts = $db->prepare('SELECT * FROM posts WHERE id=?');
+$posts->execute(array($_REQUEST['id']));
+$post = $posts->fetch();
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,7 +57,7 @@
     </div>
 
     <div class="post-content-right">
-      <p></p>
+      <p><?php print($post['title']); ?></p>
     </div>
   
   </div>
@@ -51,7 +69,7 @@
     </div>
 
     <div class="post-content-right">
-      <p class="impre"></p>
+      <p class="impre"><?php print($post['impre']); ?></p>
     </div>
 
   </div>
